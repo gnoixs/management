@@ -1,54 +1,45 @@
 <template>
   <div class="dashboard">
+    <!-- 顶部 -->
     <div class="navbar navbar-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container-fluid">
-
-          <a class="brand" href="#">管理端</a>
-
-          <!-- the new toggle buttons -->
-
+          <a class="brand" href="#">Admin</a>
+          <!-- 小屏幕下上方的菜单切换按钮 -->
           <ul class="nav pull-right">
-
             <li class="toggle-primary-sidebar hidden-desktop" data-toggle="collapse"
                 data-target=".nav-collapse-primary">
               <button type="button" class="btn btn-navbar"><i class="icon-th-list"></i></button>
             </li>
-
             <li class="hidden-desktop" data-toggle="collapse" data-target=".nav-collapse-top">
               <button type="button" class="btn btn-navbar"><i class="icon-align-justify"></i></button>
             </li>
-
           </ul>
 
+          <!-- 右侧功能按钮 -->
           <div class="nav-collapse nav-collapse-top collapse">
-
-            <ul class="nav full pull-right">
+            <div class="nav full pull-right">
+              <button class="btn btn-primary">注销</button>
+            </div>
+            <!--<ul class="nav full pull-right">
               <li class="dropdown user-avatar">
-
-                <!-- the dropdown has a custom user-avatar class, this is the small avatar with the badge -->
-
+                &lt;!&ndash; the dropdown has a custom user-avatar class, this is the small avatar with the badge &ndash;&gt;
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <span>
-                    <!--<img class="menu-avatar" src="../../images/avatars/avatar1.jpg"/>--> <span>John Smith <i
+                    &lt;!&ndash;<img class="menu-avatar" src="../../images/avatars/avatar1.jpg"/>&ndash;&gt; <span>John Smith <i
                     class="icon-caret-down"></i></span>
                     <span class="badge badge-dark-red">5</span>
                   </span>
                 </a>
-
                 <ul class="dropdown-menu">
-
-                  <!-- the first element is the one with the big avatar, add a with-image class to it -->
-
+                  &lt;!&ndash; the first element is the one with the big avatar, add a with-image class to it &ndash;&gt;
                   <li class="with-image">
                     <div class="avatar">
-                      <!--<img src="../../images/avatars/avatar1.jpg"/>-->
+                      &lt;!&ndash;<img src="../../images/avatars/avatar1.jpg"/>&ndash;&gt;
                     </div>
                     <span>John Smith</span>
                   </li>
-
                   <li class="divider"></li>
-
                   <li><a href="#"><i class="icon-user"></i> <span>Profile</span></a></li>
                   <li><a href="#"><i class="icon-cog"></i> <span>Settings</span></a></li>
                   <li><a href="#"><i class="icon-envelope"></i> <span>Messages</span> <span
@@ -57,12 +48,10 @@
                 </ul>
               </li>
             </ul>
-
             <form class="navbar-search pull-right">
               <input type="text" class="search-query animated" placeholder="Search">
               <i class="icon-search"></i>
             </form>
-
             <ul class="nav pull-right">
               <li class="active"><a href="#" title="Go home"><i class="icon-home"></i> Home</a></li>
               <li><a href="#" title="Manage users"><i class="icon-user"></i> Users</a></li>
@@ -77,46 +66,38 @@
               </li>
 
 
-            </ul>
-
+            </ul>-->
           </div>
-
-
         </div>
       </div>
     </div>
+
+    <!-- 左边栏伪容器 -->
     <div class="sidebar-background">
       <div class="primary-sidebar-background"></div>
     </div>
-
+    <!-- 左边菜单栏 -->
     <div class="primary-sidebar">
-
       <!-- Main nav -->
       <ul class="hide-dropdown-sidebar nav nav-collapse collapse nav-collapse-primary">
-
-
-        <li class="active">
+        <li class="">
           <span class="glow"></span>
-          <a href="#">
+          <a href="../forms/forms.html">
             <i class="icon-dashboard icon-2x"></i>
             <span>我的面板</span>
           </a>
         </li>
-
-       <!-- <li class="">
+        <li class="">
           <span class="glow"></span>
           <a href="../forms/forms.html">
-            <i class="icon-edit icon-2x"></i>
-            <span>即时注单</span>
+            <i class="icon-user icon-2x"></i>
+            <span>会员管理</span>
           </a>
-        </li>-->
-
-
-
+        </li>
         <li class="dark-nav">
           <span class="glow"></span>
           <a class="accordion-toggle collapsed " data-toggle="collapse" href="#MGQ8Y2bxhU">
-            <i class="icon-beaker icon-2x"></i>
+            <i class="icon-list-alt icon-2x"></i>
             <span>
               注单管理
               <i class="icon-caret-down"></i>
@@ -127,43 +108,36 @@
 
             <li class="">
               <a href="../ui_lab/buttons.html">
-                <i class="icon-hand-up"></i> 注单查询
+                <i class="icon-angle-right"></i> 注单搜索
+              </a>
+            </li>
+            <li class="">
+              <a href="../ui_lab/buttons.html">
+                <i class="icon-angle-right"></i> 注销注单
               </a>
             </li>
           </ul>
         </li>
-
-
-
-
         <li class="dark-nav ">
-
           <span class="glow"></span>
-
-
           <a class="accordion-toggle collapsed " data-toggle="collapse" href="#kdbBFDPsQA">
-            <i class="icon-link icon-2x"></i>
+            <i class="icon-credit-card icon-2x"></i>
             <span>
-                      现金管理
-                      <i class="icon-caret-down"></i>
-                    </span>
-
+              现金管理
+              <i class="icon-caret-down"></i>
+            </span>
           </a>
-
           <ul id="kdbBFDPsQA" class="collapse ">
-
             <li class="">
               <a href="../other/wizard.html">
                 <i class="icon-magic"></i> 存取款明细
               </a>
             </li>
-
             <li class="">
               <a href="../other/login.html">
                 <i class="icon-user"></i> 회원 설정
               </a>
             </li>
-
             <li class="">
               <a href="../other/sign_up.html">
                 <i class="icon-user"></i> 메인페이지 설정
@@ -172,328 +146,321 @@
           </ul>
 
         </li>
-
         <li class="dark-nav ">
-
           <span class="glow"></span>
-
-
           <a class="accordion-toggle collapsed " data-toggle="collapse" href="#kdbBFDPsQA1">
             <i class="icon-link icon-2x"></i>
             <span>
               游戏设定
               <i class="icon-caret-down"></i>
             </span>
-
           </a>
-
           <ul id="kdbBFDPsQA1" class="collapse ">
-
             <li class="">
               <a href="../other/wizard.html">
                 <i class="icon-magic"></i> 交易设定
               </a>
             </li>
-
             <li class="">
               <a href="../other/login.html">
                 <i class="icon-user"></i> 赔率设定
               </a>
             </li>
-
             <li class="">
               <a href="../other/sign_up.html">
                 <i class="icon-user"></i> 退水参照
               </a>
             </li>
-
             <li class="">
               <a href="../other/sign_up.html">
                 <i class="icon-user"></i> 小球退水参照
               </a>
             </li>
-
             <li class="">
               <a href="../other/sign_up.html">
                 <i class="icon-user"></i> 小球赔率设定
               </a>
             </li>
-
             <li class="">
               <a href="../other/sign_up.html">
                 <i class="icon-user"></i> 跟单设置
               </a>
             </li>
-
             <li class="">
               <a href="../other/sign_up.html">
                 <i class="icon-user"></i> 配置
               </a>
             </li>
           </ul>
-
         </li>
-
-
         <li class="dark-nav ">
-
           <span class="glow"></span>
-
-
           <a class="accordion-toggle collapsed " data-toggle="collapse" href="#kdbBFDPsQA2">
             <i class="icon-link icon-2x"></i>
             <span>
-                      历史开奖
-                      <i class="icon-caret-down"></i>
-                    </span>
-
+              历史开奖
+              <i class="icon-caret-down"></i>
+            </span>
           </a>
-
           <ul id="kdbBFDPsQA2" class="collapse ">
-
             <li class="">
               <a href="../other/wizard.html">
                 <i class="icon-magic"></i> 北京赛车
               </a>
             </li>
-
             <li class="">
               <a href="../other/login.html">
                 <i class="icon-user"></i> 重庆时时彩
               </a>
             </li>
-
             <li class="">
               <a href="../other/sign_up.html">
                 <i class="icon-user"></i> 幸运飞艇
               </a>
             </li>
-
             <li class="">
               <a href="../other/sign_up.html">
                 <i class="icon-user"></i> PC蛋蛋
               </a>
             </li>
           </ul>
-
         </li>
-        <!--<li class="">
-          <span class="glow"></span>
-          <a href="../charts/charts.html">
-            <i class="icon-bar-chart icon-2x"></i>
-            <span>游戏设定</span>
-          </a>
-        </li>-->
       </ul>
-
-      <!-- Small main nav -->
-      <ul class="hide-collapse-sidebar nav nav-collapse collapse nav-collapse-primary">
-
-
-        <li class="active">
-          <span class="glow"></span>
-          <a href="dashboard.html">
-            <i class="icon-dashboard icon-2x"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
+      <!-- Small main nav 小导航切换（非必要元素） -->
+      <!-- <ul class="hide-collapse-sidebar nav nav-collapse collapse nav-collapse-primary">
 
 
-        <li class="dark-nav to-right ">
-
-          <span class="glow"></span>
-          <a class="dropdown-toggle" data-toggle="dropdown" href="../ui_lab/buttons.html">
-            <i class="icon-beaker icon-2x"></i>
-            <span>
-                      UI Lab
-                      <i class="icon-caret-right"></i>
-                    </span>
-
-          </a>
-
-          <ul class="dropdown-menu">
-
-            <li class="">
-              <a href="../ui_lab/buttons.html">
-                <i class="icon-hand-up"></i> Buttons
-              </a>
-            </li>
-
-            <li class="">
-              <a href="../ui_lab/general.html">
-                <i class="icon-beaker"></i> General elements
-              </a>
-            </li>
-
-            <li class="">
-              <a href="../ui_lab/icons.html">
-                <i class="icon-info-sign"></i> Icons
-              </a>
-            </li>
-
-            <li class="">
-              <a href="../ui_lab/grid.html">
-                <i class="icon-th-large"></i> Grid
-              </a>
-            </li>
-
-            <li class="">
-              <a href="../ui_lab/tables.html">
-                <i class="icon-table"></i> Tables
-              </a>
-            </li>
-
-            <li class="">
-              <a href="../ui_lab/widgets.html">
-                <i class="icon-plus-sign-alt"></i> Widgets
-              </a>
-            </li>
-
-          </ul>
-
-        </li>
+         <li class="active">
+           <span class="glow"></span>
+           <a href="dashboard.html">
+             <i class="icon-dashboard icon-2x"></i>
+             <span>Dashboard</span>
+           </a>
+         </li>
 
 
-        <li class="">
-          <span class="glow"></span>
-          <a href="../forms/forms.html">
-            <i class="icon-edit icon-2x"></i>
-            <span>Forms</span>
-          </a>
-        </li>
+         <li class="dark-nav to-right ">
+
+           <span class="glow"></span>
+           <a class="dropdown-toggle" data-toggle="dropdown" href="../ui_lab/buttons.html">
+             <i class="icon-beaker icon-2x"></i>
+             <span>
+                       UI Lab
+                       <i class="icon-caret-right"></i>
+                     </span>
+
+           </a>
+
+           <ul class="dropdown-menu">
+
+             <li class="">
+               <a href="../ui_lab/buttons.html">
+                 <i class="icon-hand-up"></i> Buttons
+               </a>
+             </li>
+
+             <li class="">
+               <a href="../ui_lab/general.html">
+                 <i class="icon-beaker"></i> General elements
+               </a>
+             </li>
+
+             <li class="">
+               <a href="../ui_lab/icons.html">
+                 <i class="icon-info-sign"></i> Icons
+               </a>
+             </li>
+
+             <li class="">
+               <a href="../ui_lab/grid.html">
+                 <i class="icon-th-large"></i> Grid
+               </a>
+             </li>
+
+             <li class="">
+               <a href="../ui_lab/tables.html">
+                 <i class="icon-table"></i> Tables
+               </a>
+             </li>
+
+             <li class="">
+               <a href="../ui_lab/widgets.html">
+                 <i class="icon-plus-sign-alt"></i> Widgets
+               </a>
+             </li>
+
+           </ul>
+
+         </li>
 
 
-        <li class="">
-          <span class="glow"></span>
-          <a href="../charts/charts.html">
-            <i class="icon-bar-chart icon-2x"></i>
-            <span>Charts</span>
-          </a>
-        </li>
+         <li class="">
+           <span class="glow"></span>
+           <a href="../forms/forms.html">
+             <i class="icon-edit icon-2x"></i>
+             <span>Forms</span>
+           </a>
+         </li>
 
 
-        <li class="dark-nav to-right ">
-
-          <span class="glow"></span>
-          <a class="dropdown-toggle" data-toggle="dropdown" href="../other/wizard.html">
-            <i class="icon-link icon-2x"></i>
-            <span>
-                      Others
-                      <i class="icon-caret-right"></i>
-                    </span>
-
-          </a>
-
-          <ul class="dropdown-menu">
-
-            <li class="">
-              <a href="../other/wizard.html">
-                <i class="icon-magic"></i> Wizard
-              </a>
-            </li>
-
-            <li class="">
-              <a href="../other/login.html">
-                <i class="icon-user"></i> Login Page
-              </a>
-            </li>
-
-            <li class="">
-              <a href="../other/sign_up.html">
-                <i class="icon-user"></i> Sign Up Page
-              </a>
-            </li>
-
-            <li class="">
-              <a href="../other/full_calendar.html">
-                <i class="icon-calendar"></i> Full Calendar
-              </a>
-            </li>
-
-            <li class="">
-              <a href="../other/error404.html">
-                <i class="icon-ban-circle"></i> Error 404 page
-              </a>
-            </li>
-
-          </ul>
-
-        </li>
+         <li class="">
+           <span class="glow"></span>
+           <a href="../charts/charts.html">
+             <i class="icon-bar-chart icon-2x"></i>
+             <span>Charts</span>
+           </a>
+         </li>
 
 
-      </ul>
+         <li class="dark-nav to-right ">
 
-      <!--<div class="hide-dropdown-sidebar hidden-tablet hidden-phone">
-        <div class="text-center" style="margin-top: 60px">
-          <div class="easy-pie-chart-percent" style="display: inline-block" data-percent="89"><span>89%</span></div>
-          <div style="padding-top: 20px"><b>CPU Usage</b></div>
-        </div>
+           <span class="glow"></span>
+           <a class="dropdown-toggle" data-toggle="dropdown" href="../other/wizard.html">
+             <i class="icon-link icon-2x"></i>
+             <span>
+                       Others
+                       <i class="icon-caret-right"></i>
+                     </span>
 
-        <hr class="divider" style="margin-top: 60px">
+           </a>
 
-        <div class="sparkline-box side">
+           <ul class="dropdown-menu">
 
-          <div class="sparkline-row">
-            <h4 class="gray"><span>Orders</span> 847</h4>
-            <div class="sparkline big" data-color="gray">&lt;!&ndash;28,10,19,23,9,19,24,8,29,27,24,21&ndash;&gt;</div>
-          </div>
+             <li class="">
+               <a href="../other/wizard.html">
+                 <i class="icon-magic"></i> Wizard
+               </a>
+             </li>
 
-          <hr class="divider">
-          <div class="sparkline-row">
-            <h4 class="dark-green"><span>Income</span> $43.330</h4>
-            <div class="sparkline big" data-color="darkGreen">&lt;!&ndash;27,4,10,16,5,20,3,24,6,18,25,20&ndash;&gt;</div>
-          </div>
+             <li class="">
+               <a href="../other/login.html">
+                 <i class="icon-user"></i> Login Page
+               </a>
+             </li>
 
-          <hr class="divider">
-          <div class="sparkline-row">
-            <h4 class="blue"><span>Reviews</span> 223</h4>
-            <div class="sparkline big" data-color="blue">&lt;!&ndash;22,20,24,29,23,11,25,15,29,10,19,28&ndash;&gt;</div>
-          </div>
+             <li class="">
+               <a href="../other/sign_up.html">
+                 <i class="icon-user"></i> Sign Up Page
+               </a>
+             </li>
 
-          <hr class="divider">
-        </div>
-      </div>-->
+             <li class="">
+               <a href="../other/full_calendar.html">
+                 <i class="icon-calendar"></i> Full Calendar
+               </a>
+             </li>
+
+             <li class="">
+               <a href="../other/error404.html">
+                 <i class="icon-ban-circle"></i> Error 404 page
+               </a>
+             </li>
+
+           </ul>
+
+         </li>
 
 
+       </ul>-->
+      <!-- 左侧统计等 -->
+      <!--     <div class="hide-dropdown-sidebar hidden-tablet hidden-phone">
+         <div class="text-center" style="margin-top: 60px">
+           <div class="easy-pie-chart-percent" style="display: inline-block" data-percent="89"><span>89%</span></div>
+           <div style="padding-top: 20px"><b>CPU Usage</b></div>
+         </div>
+
+         <hr class="divider" style="margin-top: 60px">
+
+         <div class="sparkline-box side">
+
+           <div class="sparkline-row">
+             <h4 class="gray"><span>Orders</span> 847</h4>
+             <div class="sparkline big" data-color="gray">&lt;!&ndash;28,10,19,23,9,19,24,8,29,27,24,21&ndash;&gt;</div>
+           </div>
+
+           <hr class="divider">
+           <div class="sparkline-row">
+             <h4 class="dark-green"><span>Income</span> $43.330</h4>
+             <div class="sparkline big" data-color="darkGreen">&lt;!&ndash;27,4,10,16,5,20,3,24,6,18,25,20&ndash;&gt;</div>
+           </div>
+
+           <hr class="divider">
+           <div class="sparkline-row">
+             <h4 class="blue"><span>Reviews</span> 223</h4>
+             <div class="sparkline big" data-color="blue">&lt;!&ndash;22,20,24,29,23,11,25,15,29,10,19,28&ndash;&gt;</div>
+           </div>
+
+           <hr class="divider">
+         </div>
+       </div>-->
     </div>
-    <!-- main content -->
+
+    <!-- main content 主要内容区域 -->
     <div class="main-content">
       <div class="container-fluid">
         <div class="row-fluid">
-
           <div class="area-top clearfix">
-            <div class="pull-left header">
-              <h3 class="title">
-                <i class="icon-dashboard"></i>
-                Dashboard
-              </h3>
-              <h5>
-            <span class="hidden-tablet hidden-phone">
-              Click <a href="#" id="switch-sidebar">here</a> for a different sidebar
-            </span>
-                <span class="hidden-desktop">
-              A subtitle can go here
-            </span>
-              </h5>
+            <div class="pull-left header col-md-5">
+              <!-- 通知框2个-->
+              <!--<div class="row">
+                <div class="col-md-4">
+                  <a href="#">
+                      <div class="well relative">
+                        <span class="triangle-button green">
+                          <i class="icon-bell"></i>
+                        </span>
+                        <span>入款等待</span>
+                        <span class="badge badge-green">0</span>
+                      </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="#">
+                    <div class="well relative second">
+                        <span class="triangle-button blue">
+                          <i class="icon-bell"></i>
+                        </span>
+                      <span>出款等待</span>
+                      <span class="badge badge-blue">0</span>
+                    </div>
+                  </a>
+                </div>
+              </div>-->
+
+              <div class="span3">
+                <div class="well relative">
+                  <span class="triangle-button green"><i class="icon-bell"></i></span>
+                  入款等待
+                  <span class="badge badge-green">100000</span>
+                </div>
+              </div>
+
+              <div class="span3">
+                <div class="well relative">
+                  <span class="triangle-button blue"><i class="icon-bell"></i></span>
+                  入款等待
+                  <span class="badge badge-blue">200000</span>
+                </div>
+              </div>
+
+
+
+
+
             </div>
-
             <ul class="inline pull-right sparkline-box">
-
               <li class="sparkline-row">
-                <h4 class="blue"><span>Orders</span> 847</h4>
+                <h4 class="blue"><span>本周入款</span> 847</h4>
                 <div class="sparkline big" data-color="blue"><!--19,20,8,3,25,13,23,9,17,29,19,16--></div>
               </li>
-
               <li class="sparkline-row">
-                <h4 class="green"><span>Reviews</span> 223</h4>
+                <h4 class="green"><span>本周出款</span> 223</h4>
                 <div class="sparkline big" data-color="green"><!--4,29,19,19,21,6,5,9,25,9,16,13--></div>
               </li>
-
               <li class="sparkline-row">
-                <h4 class="red"><span>New visits</span> 7930</h4>
+                <h4 class="red"><span>在线人数</span> 7930</h4>
                 <div class="sparkline big"><!--7,21,7,23,23,12,3,28,16,11,19,7--></div>
               </li>
-
             </ul>
           </div>
         </div>
@@ -963,21 +930,51 @@
 
 <script>
   export default {
-      name: 'dashboard',
-      created(){
+    name: 'dashboard',
+    created(){
 
-      },
-      data(){
-          return {
-
-          }
-      },
-      methods: {
-
-      }
+    },
+    data(){
+      return {}
+    },
+    methods: {}
   }
 </script>
 
 <style scoped>
+  .area-top .header i.icon-bell{
+    float: none;
+    font-size: 14px;
+    margin-top: 0;
+    margin-right: 0;
+    color: #ffffff;
+  }
+
+  .pull-left .row{
+    /*margin-left: 0;*/
+  }
+
+  .pull-left .relative{
+    min-width: 64px;
+    /*position: absolute;
+    padding-bottom: 16px;*/
+  }
+
+  .pull-left .relative.second{
+    /*left: 145px;*/
+  }
+  .nav-collapse .btn{
+    margin-top: 8px;
+  }
+@media screen and (max-width: 768px){
+  .pull-left .relative{
+    position: relative;
+  }
+  .pull-left .relative.second{
+    left: 0px;
+  }
+}
+
+
 
 </style>

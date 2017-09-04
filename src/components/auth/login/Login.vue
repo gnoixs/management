@@ -48,18 +48,18 @@
           <span class="add-on" href="#">
             <i class="icon-user"></i>
           </span>
-                  <input type="text" placeholder="请输入用户名">
+                  <input type="text" placeholder="请输入用户名" v-model="User.user_name">
                 </div>
 
                 <div class="input-prepend">
           <span class="add-on" href="#">
             <i class="icon-key"></i>
           </span>
-                  <input type="password" placeholder="请输入密码">
+                  <input type="password" placeholder="请输入密码" v-model="User.user_passwd">
                 </div>
 
                 <div>
-                  <a class="btn btn-blue btn-block" href="../dashboard/dashboard.html">
+                  <a class="btn btn-blue btn-block" @click.prevent="onSubmit">
                     登陆 <i class="icon-signin"></i>
                   </a>
                 </div>
@@ -91,13 +91,31 @@
 
 <script>
   import {PATH_LOGIN} from '@/assets/scripts/interfaces.js'
+  //import axios from 'axios'
+  import { setStorage } from '@/assets/scripts/sessionStorage.js'
   export default {
     name: 'login',
     created(){
       //console.log(PATH_LOGIN);
     },
     data () {
-      return {}
+      return {
+          User:{
+            user_name: '',
+            user_passwd: ''
+          },
+        errorMsg: ''
+      }
+    },
+    methods: {
+        onSubmit(){
+          if(this.User.user_name == ''){
+              this.errorMsg = '用户名不能为空!';
+              return
+          }else if(/[a-zA-Z0-9_]{3,16}/.test(this.User.user_name)){
+              this.errorMsg = '用户名必须是3到16位数字字母或下划线组合!';
+          }
+        }
     }
   }
 </script>
