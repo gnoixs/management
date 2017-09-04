@@ -488,7 +488,7 @@
         </div>
       </div>
 
-      <!--<div class="container-fluid padded">
+  <!--<div class="container-fluid padded">
         <div class="row-fluid">
 
           <div class="span3">
@@ -950,30 +950,13 @@
     color: #ffffff;
   }
 
-  .pull-left .row{
-    /*margin-left: 0;*/
+  .pull-left .span3{
+    min-width: 114px; 
   }
 
-  .pull-left .relative{
-    min-width: 64px;
-    /*position: absolute;
-    padding-bottom: 16px;*/
-  }
-
-  .pull-left .relative.second{
-    /*left: 145px;*/
-  }
   .nav-collapse .btn{
     margin-top: 8px;
   }
-@media screen and (max-width: 768px){
-  .pull-left .relative{
-    position: relative;
-  }
-  .pull-left .relative.second{
-    left: 0px;
-  }
-}
 
 
 
