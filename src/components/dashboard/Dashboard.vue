@@ -18,9 +18,15 @@
 
           <!-- 右侧功能按钮 -->
           <div class="nav-collapse nav-collapse-top collapse">
-            <div class="nav full pull-right">
-              <button class="btn btn-primary">注销</button>
-            </div>
+
+            <ul class="nav pull-right">
+              <li class="active" style="text-align: center;">
+                <a href="#" title="signout">
+                  <i class="icon-signout">
+                  </i>注销
+                </a>
+              </li>
+            </ul>
             <!--<ul class="nav full pull-right">
               <li class="dropdown user-avatar">
                 &lt;!&ndash; the dropdown has a custom user-avatar class, this is the small avatar with the badge &ndash;&gt;
@@ -402,36 +408,11 @@
           <div class="area-top clearfix">
             <div class="pull-left header col-md-5">
               <!-- 通知框2个-->
-              <!--<div class="row">
-                <div class="col-md-4">
-                  <a href="#">
-                      <div class="well relative">
-                        <span class="triangle-button green">
-                          <i class="icon-bell"></i>
-                        </span>
-                        <span>入款等待</span>
-                        <span class="badge badge-green">0</span>
-                      </div>
-                  </a>
-                </div>
-                <div class="col-md-4">
-                  <a href="#">
-                    <div class="well relative second">
-                        <span class="triangle-button blue">
-                          <i class="icon-bell"></i>
-                        </span>
-                      <span>出款等待</span>
-                      <span class="badge badge-blue">0</span>
-                    </div>
-                  </a>
-                </div>
-              </div>-->
-
               <div class="span3">
                 <div class="well relative">
                   <span class="triangle-button green"><i class="icon-bell"></i></span>
                   入款等待
-                  <span class="badge badge-green">100000</span>
+                  <span class="badge badge-green">0</span>
                 </div>
               </div>
 
@@ -439,14 +420,9 @@
                 <div class="well relative">
                   <span class="triangle-button blue"><i class="icon-bell"></i></span>
                   入款等待
-                  <span class="badge badge-blue">200000</span>
+                  <span class="badge badge-blue">0</span>
                 </div>
               </div>
-
-
-
-
-
             </div>
             <ul class="inline pull-right sparkline-box">
               <li class="sparkline-row">
@@ -951,7 +927,11 @@
   }
 
   .pull-left .span3{
-    min-width: 114px; 
+    min-width: 109px; 
+  }
+
+  .pull-left .well{
+    margin-bottom: 0;
   }
 
   .nav-collapse .btn{
