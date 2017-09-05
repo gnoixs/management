@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-//import Login from '@/components/auth/Login'
-//import Signup from '@/components/auth/Signup'
 
 // 登陆
 const Login = (resolve) => {
@@ -31,6 +29,12 @@ const NotFound = (resolve) => {
   })
 }
 
+// 注单查询
+const CheckOrder = (resolve) => {
+  import('@/components/dashboard/orders/CheckOrder').then((module) => {
+    resolve(module);
+  })
+}
 
 Vue.use(Router)
 
@@ -54,7 +58,14 @@ export default new Router({
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: Dashboard
+      component: Dashboard,
+      children: [
+        {
+          path: '/dashboard/checkorder',
+          name: 'checkorder',
+          component: CheckOrder
+        }
+      ]
     },
     {
       path: '/404',

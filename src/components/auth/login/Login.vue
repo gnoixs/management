@@ -59,7 +59,7 @@
                 </div>
 
                 <div>
-                  <a class="btn btn-blue btn-block" @click.prevent="onSubmit">
+                  <a class="btn btn-blue btn-block" @click.prevent="onLogin">
                     登陆 <i class="icon-signin"></i>
                   </a>
                 </div>
@@ -92,7 +92,7 @@
 <script>
   import {PATH_LOGIN} from '@/assets/scripts/interfaces.js'
   //import axios from 'axios'
-  import { setStorage } from '@/assets/scripts/sessionStorage.js'
+  import {setStorage} from '@/assets/scripts/sessionStorage.js'
   export default {
     name: 'login',
     created(){
@@ -100,22 +100,23 @@
     },
     data () {
       return {
-          User:{
-            user_name: '',
-            user_passwd: ''
-          },
+        User: {
+          user_name: '',
+          user_passwd: ''
+        },
         errorMsg: ''
       }
     },
     methods: {
-        onSubmit(){
-          if(this.User.user_name == ''){
-              this.errorMsg = '用户名不能为空!';
-              return
-          }else if(/[a-zA-Z0-9_]{3,16}/.test(this.User.user_name)){
-              this.errorMsg = '用户名必须是3到16位数字字母或下划线组合!';
-          }
+      onLogin(){
+        if (this.User.user_name == '') {
+          this.errorMsg = '用户名不能为空!';
+          return
+        } else if (/[a-zA-Z0-9_]{3,16}/.test(this.User.user_name)) {
+          this.errorMsg = '用户名必须是3到16位数字字母或下划线组合!';
+          return
         }
+      }
     }
   }
 </script>
