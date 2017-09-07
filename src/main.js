@@ -13,7 +13,7 @@ import '@/assets/styles/application.css';
 //import '@/assets/scripts/application.js';
 
 // 引用bootstrap js
-import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
+//import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
 
 
 Vue.config.productionTip = false
