@@ -7,13 +7,10 @@ import router from './router'
 // 插件样式
 import '@/assets/styles/application.css';
 
-//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
 // 插件js
 //import '@/assets/scripts/application.js';
 
-// 引用bootstrap js
-//import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
+import '@/assets/scripts/app.js'
 
 
 Vue.config.productionTip = false
